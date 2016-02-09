@@ -1,11 +1,11 @@
 app.controller('DashboardController', function($scope, MusicService){
     $scope.test = 'hello dashboard';
-   
     $scope.albums = MusicService.getAlbums();
 })
 
 app.service('MusicService', function(){
     var albums = [{
+        id: '123GF749',
         title: 'AFD',
         artist: 'G&R',
         albumArt: 'https://i.ytimg.com/vi/auodBtahBIM/hqdefault.jpg',
@@ -29,6 +29,7 @@ app.service('MusicService', function(){
             runTime: '4:34'
             }]
     },{
+        id: 'SR71',
         title: 'And Justice for All',
         artist: 'Metallica',
         albumArt: 'https://cbsradionews.files.wordpress.com/2013/08/metallica-and-justice-for-all.jpg',
@@ -52,6 +53,7 @@ app.service('MusicService', function(){
             runTime: '4:34'
             }]
     },{
+        id: '666',
         title: 'Workingman\'s Dead',
         artist: 'The Grateful Dead',
         albumArt: 'http://991.com/newgallery/Grateful+Dead+Workingmans+Dead+592855.jpg',
@@ -79,5 +81,14 @@ app.service('MusicService', function(){
     this.getAlbums = function(){
         return albums;
     }
-    
+	
+    this.getAlbum = function(id){
+        for (var i = 0; i < albums.length; i++) {
+            var currentAlbum = albums[i];
+            if(currentAlbum.id === id){
+                return currentAlbum;
+            }
+        }
+    }
+         
 }) 
