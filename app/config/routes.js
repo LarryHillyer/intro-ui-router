@@ -19,14 +19,14 @@ app.config(function($stateProvider, $urlRouterProvider){
           templateUrl: 'app/components/albums/albums.html'
       })
       .state('album', {
-          url: '/albums/:id',
+          url: '/albums/:title',
           controller: 'AlbumController',
           templateUrl: 'app/components/albums/album.html',
-          resolve: {
-              album: function($stateParams, MusicService){
-                  return MusicService.getAlbum($stateParams.id);
-              }
-          }
+        //   resolve: {
+        //       album: function($stateParams, MusicService){
+        //           return MusicService.getAlbum($stateParams.title);
+        //       }
+        //   }
       })
       .state('auth', {
           abstract: true,
