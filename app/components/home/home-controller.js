@@ -1,6 +1,6 @@
 app.controller('MainController', function($scope, AuthService, $state){
     
-    $scope.isLoggedIn = false;
+    $scope.isLoggedIn = true;
     
     $scope.login = function(){
         AuthService.login();
@@ -21,7 +21,7 @@ app.controller('HomeController', function($scope){
 })
 
 app.service('AuthService', function(){
-    this.loggedIn = false;
+    this.loggedIn = true;
     this.login = function(){
         this.loggedIn = true;
     }

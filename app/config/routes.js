@@ -1,4 +1,6 @@
-app.config(function($stateProvider){
+app.config(function($stateProvider, $urlRouterProvider){
+    
+    $urlRouterProvider.otherwise('/home');
     
     $stateProvider
       .state('home', {
@@ -22,6 +24,7 @@ app.config(function($stateProvider){
       })
       .state('auth.dashboard', {
           url: '/dashboard',
-          template: '<h1>YOU ARE AWESOME and Authenticated</h1>'
+          templateUrl: 'app/components/dashboard/dashboard.html',
+          controller: 'DashboardController'
       }) 
 })
