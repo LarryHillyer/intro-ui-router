@@ -5,10 +5,13 @@
     <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    {{2+2}}
+    
+    <ui-view></ui-view>
+    
+    
     <!--LOAD ANGULAR-->
     <script src="assets/plugins/angular/angular.min.js"></script>
-    <script src="assets/plugins/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="assets/plugins/angular-ui-router/release/angular-ui-router.js"></script>
     
     <!--LOAD FIREBASE-->
     <script src="assets/plugins/firebase/firebase.js"></script>
@@ -16,6 +19,8 @@
     
     <!--START APP-->
     <script src="app/config/init.js"></script>
+    <script src="app/config/routes.js"></script>
+    <script src="app/components/home/home-controller.js"></script>
     
 </body>
 </html>
