@@ -1,0 +1,15 @@
+<ul class="list-group">
+    <li class="list-group-item" ng-repeat="album in albums">
+        <!--<a ng-href="#/albums/{{album.id}}">  <--- ng-href normal way to do things    -->
+        <a ui-sref="album({title: album.title})">  <!-- THE UI-ROUTER way  -->
+            <div class="media">
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{album.albumArt}}" alt="{{album.title}}" width="120">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{album.artist}} - {{album.title}}</h4>
+                </div>
+            </div>
+        </a>
+    </li>
+</ul>
