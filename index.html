@@ -4,7 +4,10 @@
     <title>Intro to ui-router</title>
     <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-controller="MainController">
+    {{isLoggedIn}}
+    <button ng-click="login()">Login</button>
+    <button ng-click="logout()">Logout</button>
     
     <ui-view></ui-view>
     
